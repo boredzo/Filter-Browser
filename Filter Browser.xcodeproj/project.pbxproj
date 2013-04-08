@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		316F466E1712875B00CD5942 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316F466D1712875B00CD5942 /* UIKit.framework */; };
+		316F46701712875B00CD5942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316F466F1712875B00CD5942 /* Foundation.framework */; };
+		316F46721712875B00CD5942 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316F46711712875B00CD5942 /* CoreGraphics.framework */; };
+		316F46781712875B00CD5942 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316F46761712875B00CD5942 /* InfoPlist.strings */; };
+		316F467A1712875B00CD5942 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 316F46791712875B00CD5942 /* main.m */; };
+		316F467E1712875B00CD5942 /* PRHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316F467D1712875B00CD5942 /* PRHAppDelegate.m */; };
+		316F46801712875B00CD5942 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 316F467F1712875B00CD5942 /* Default.png */; };
+		316F46821712875B00CD5942 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 316F46811712875B00CD5942 /* Default@2x.png */; };
+		316F46841712875B00CD5942 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 316F46831712875B00CD5942 /* Default-568h@2x.png */; };
+		316F46871712875B00CD5942 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316F46851712875B00CD5942 /* MainStoryboard.storyboard */; };
+		316F468A1712875B00CD5942 /* PRHMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316F46891712875B00CD5942 /* PRHMasterViewController.m */; };
+		316F468D1712875B00CD5942 /* PRHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316F468C1712875B00CD5942 /* PRHDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		316F466A1712875B00CD5942 /* Filter Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filter Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		316F466D1712875B00CD5942 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		316F466F1712875B00CD5942 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		316F46711712875B00CD5942 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		316F46751712875B00CD5942 /* Filter Browser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Filter Browser-Info.plist"; sourceTree = "<group>"; };
+		316F46771712875B00CD5942 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		316F46791712875B00CD5942 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		316F467B1712875B00CD5942 /* Filter Browser-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Filter Browser-Prefix.pch"; sourceTree = "<group>"; };
+		316F467C1712875B00CD5942 /* PRHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHAppDelegate.h; sourceTree = "<group>"; };
+		316F467D1712875B00CD5942 /* PRHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHAppDelegate.m; sourceTree = "<group>"; };
+		316F467F1712875B00CD5942 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		316F46811712875B00CD5942 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		316F46831712875B00CD5942 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		316F46861712875B00CD5942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		316F46881712875B00CD5942 /* PRHMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHMasterViewController.h; sourceTree = "<group>"; };
+		316F46891712875B00CD5942 /* PRHMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHMasterViewController.m; sourceTree = "<group>"; };
+		316F468B1712875B00CD5942 /* PRHDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHDetailViewController.h; sourceTree = "<group>"; };
+		316F468C1712875B00CD5942 /* PRHDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		316F46671712875B00CD5942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				316F466E1712875B00CD5942 /* UIKit.framework in Frameworks */,
+				316F46701712875B00CD5942 /* Foundation.framework in Frameworks */,
+				316F46721712875B00CD5942 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		316F46611712875B00CD5942 = {
+			isa = PBXGroup;
+			children = (
+				316F46731712875B00CD5942 /* Filter Browser */,
+				316F466C1712875B00CD5942 /* Frameworks */,
+				316F466B1712875B00CD5942 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		316F466B1712875B00CD5942 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				316F466A1712875B00CD5942 /* Filter Browser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		316F466C1712875B00CD5942 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				316F466D1712875B00CD5942 /* UIKit.framework */,
+				316F466F1712875B00CD5942 /* Foundation.framework */,
+				316F46711712875B00CD5942 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		316F46731712875B00CD5942 /* Filter Browser */ = {
+			isa = PBXGroup;
+			children = (
+				316F467C1712875B00CD5942 /* PRHAppDelegate.h */,
+				316F467D1712875B00CD5942 /* PRHAppDelegate.m */,
+				316F46851712875B00CD5942 /* MainStoryboard.storyboard */,
+				316F46881712875B00CD5942 /* PRHMasterViewController.h */,
+				316F46891712875B00CD5942 /* PRHMasterViewController.m */,
+				316F468B1712875B00CD5942 /* PRHDetailViewController.h */,
+				316F468C1712875B00CD5942 /* PRHDetailViewController.m */,
+				316F46741712875B00CD5942 /* Supporting Files */,
+			);
+			path = "Filter Browser";
+			sourceTree = "<group>";
+		};
+		316F46741712875B00CD5942 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				316F46751712875B00CD5942 /* Filter Browser-Info.plist */,
+				316F46761712875B00CD5942 /* InfoPlist.strings */,
+				316F46791712875B00CD5942 /* main.m */,
+				316F467B1712875B00CD5942 /* Filter Browser-Prefix.pch */,
+				316F467F1712875B00CD5942 /* Default.png */,
+				316F46811712875B00CD5942 /* Default@2x.png */,
+				316F46831712875B00CD5942 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		316F46691712875B00CD5942 /* Filter Browser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 316F46901712875B00CD5942 /* Build configuration list for PBXNativeTarget "Filter Browser" */;
+			buildPhases = (
+				316F46661712875B00CD5942 /* Sources */,
+				316F46671712875B00CD5942 /* Frameworks */,
+				316F46681712875B00CD5942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Filter Browser";
+			productName = "Filter Browser";
+			productReference = 316F466A1712875B00CD5942 /* Filter Browser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		316F46621712875B00CD5942 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PRH;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Peter Hosey";
+			};
+			buildConfigurationList = 316F46651712875B00CD5942 /* Build configuration list for PBXProject "Filter Browser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 316F46611712875B00CD5942;
+			productRefGroup = 316F466B1712875B00CD5942 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				316F46691712875B00CD5942 /* Filter Browser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		316F46681712875B00CD5942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				316F46781712875B00CD5942 /* InfoPlist.strings in Resources */,
+				316F46801712875B00CD5942 /* Default.png in Resources */,
+				316F46821712875B00CD5942 /* Default@2x.png in Resources */,
+				316F46841712875B00CD5942 /* Default-568h@2x.png in Resources */,
+				316F46871712875B00CD5942 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		316F46661712875B00CD5942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				316F467A1712875B00CD5942 /* main.m in Sources */,
+				316F467E1712875B00CD5942 /* PRHAppDelegate.m in Sources */,
+				316F468A1712875B00CD5942 /* PRHMasterViewController.m in Sources */,
+				316F468D1712875B00CD5942 /* PRHDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		316F46761712875B00CD5942 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				316F46771712875B00CD5942 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		316F46851712875B00CD5942 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				316F46861712875B00CD5942 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		316F468E1712875B00CD5942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		316F468F1712875B00CD5942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		316F46911712875B00CD5942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Filter Browser/Filter Browser-Prefix.pch";
+				INFOPLIST_FILE = "Filter Browser/Filter Browser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		316F46921712875B00CD5942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Filter Browser/Filter Browser-Prefix.pch";
+				INFOPLIST_FILE = "Filter Browser/Filter Browser-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		316F46651712875B00CD5942 /* Build configuration list for PBXProject "Filter Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				316F468E1712875B00CD5942 /* Debug */,
+				316F468F1712875B00CD5942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		316F46901712875B00CD5942 /* Build configuration list for PBXNativeTarget "Filter Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				316F46911712875B00CD5942 /* Debug */,
+				316F46921712875B00CD5942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 316F46621712875B00CD5942 /* Project object */;
+}
