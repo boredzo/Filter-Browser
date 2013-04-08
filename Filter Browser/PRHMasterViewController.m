@@ -11,6 +11,7 @@
 #import "PRHDetailViewController.h"
 
 @interface PRHMasterViewController () {
+	NSArray *_filterCategoryNames;
     NSMutableArray *_objects;
 }
 @end
@@ -25,11 +26,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
 	self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
 	UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 	self.navigationItem.rightBarButtonItem = addButton;
+
+	_filterCategoryNames = [self discoverAllCategoryNames];
+}
+
+- (NSArray *) discoverAllCategoryNames {
+	NSMutableSet *allCategoryNamesSet = [NSMutableSet new];
+
+	NSArray *allFilterNames = [CIFilter filterNamesInCategories:nil];
+	for (NSString *filterName in allFilterNames) {
+		@autoreleasepool {
+			CIFilter *filter = [CIFilter filterWithName:filterName];
+			NSDictionary *attributes = filter.attributes;
+			NSArray *filterCategoryNames = attributes[kCIAttributeFilterCategories];
+			[allCategoryNamesSet unionSet:[NSSet setWithArray:filterCategoryNames]];
+		}
+	}
+
+	return [[allCategoryNamesSet allObjects] sortedArrayUsingSelector:@selector(compare:)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,27 +71,60 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	return 1;
+	return _filterCategoryNames.count;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return _filterCategoryNames[section];
+}
+
+- (NSArray *) sectionIndexTitlesForTableView:(UITableView *)tableView {
+	NSMutableArray *sectionIndexTitles = [@[ ] mutableCopy];
+	for (__strong NSString *categoryName in _filterCategoryNames) {
+		NSString *appleCategoryPrefix = @"CICategory";
+		if ([categoryName hasPrefix:appleCategoryPrefix])
+			categoryName = [categoryName substringFromIndex:appleCategoryPrefix.length];
+
+		NSString *firstThreeLetters;
+		if ([categoryName isEqualToString:@"HighDynamicRange"])
+			firstThreeLetters = @"HDR";
+		else {
+			firstThreeLetters = [categoryName substringToIndex:MIN(3, [categoryName length])];
+
+			//TODO: De-dupe “ColorAdjustment” and “ColorEffect” (which both truncate to “Col”) to “C.Adj” and “C.Eff” or something like that
+		}
+
+		[sectionIndexTitles addObject:firstThreeLetters];
+	}
+	return sectionIndexTitles;
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return _objects.count;
+	NSString *selectedCategoryName = _filterCategoryNames[section];
+	NSArray *filterNames = [self filterNamesInCategory:selectedCategoryName];
+	return filterNames.count;
+}
+
+- (NSArray *) filterNamesInCategory:(NSString *)categoryName {
+	return [CIFilter filterNamesInCategory:categoryName];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-	NSDate *object = _objects[indexPath.row];
-	cell.textLabel.text = [object description];
+	NSString *categoryName = _filterCategoryNames[indexPath.section];
+	NSArray *filterNames = [self filterNamesInCategory:categoryName];
+	cell.textLabel.text = filterNames[indexPath.row];
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

@@ -18,7 +18,7 @@
 		316F46841712875B00CD5942 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 316F46831712875B00CD5942 /* Default-568h@2x.png */; };
 		316F46871712875B00CD5942 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316F46851712875B00CD5942 /* MainStoryboard.storyboard */; };
 		316F468A1712875B00CD5942 /* PRHMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316F46891712875B00CD5942 /* PRHMasterViewController.m */; };
-		316F468D1712875B00CD5942 /* PRHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316F468C1712875B00CD5942 /* PRHDetailViewController.m */; };
+		316F469417128CAB00CD5942 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316F469317128CAB00CD5942 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,7 @@
 		316F46861712875B00CD5942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		316F46881712875B00CD5942 /* PRHMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHMasterViewController.h; sourceTree = "<group>"; };
 		316F46891712875B00CD5942 /* PRHMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHMasterViewController.m; sourceTree = "<group>"; };
-		316F468B1712875B00CD5942 /* PRHDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHDetailViewController.h; sourceTree = "<group>"; };
-		316F468C1712875B00CD5942 /* PRHDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHDetailViewController.m; sourceTree = "<group>"; };
+		316F469317128CAB00CD5942 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316F469417128CAB00CD5942 /* CoreImage.framework in Frameworks */,
 				316F466E1712875B00CD5942 /* UIKit.framework in Frameworks */,
 				316F46701712875B00CD5942 /* Foundation.framework in Frameworks */,
 				316F46721712875B00CD5942 /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +76,7 @@
 		316F466C1712875B00CD5942 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				316F469317128CAB00CD5942 /* CoreImage.framework */,
 				316F466D1712875B00CD5942 /* UIKit.framework */,
 				316F466F1712875B00CD5942 /* Foundation.framework */,
 				316F46711712875B00CD5942 /* CoreGraphics.framework */,
@@ -91,8 +92,6 @@
 				316F46851712875B00CD5942 /* MainStoryboard.storyboard */,
 				316F46881712875B00CD5942 /* PRHMasterViewController.h */,
 				316F46891712875B00CD5942 /* PRHMasterViewController.m */,
-				316F468B1712875B00CD5942 /* PRHDetailViewController.h */,
-				316F468C1712875B00CD5942 /* PRHDetailViewController.m */,
 				316F46741712875B00CD5942 /* Supporting Files */,
 			);
 			path = "Filter Browser";
@@ -182,7 +181,6 @@
 				316F467A1712875B00CD5942 /* main.m in Sources */,
 				316F467E1712875B00CD5942 /* PRHAppDelegate.m in Sources */,
 				316F468A1712875B00CD5942 /* PRHMasterViewController.m in Sources */,
-				316F468D1712875B00CD5942 /* PRHDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +218,6 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -251,7 +248,6 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
